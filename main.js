@@ -1,3 +1,21 @@
+document.onkeydown = keydown;
+
+function keydown() {
+    // insert(event.keyCode-48);
+    if (event.keyCode >= 48 && event.keyCode<= 57) {
+        insert(event.keyCode-48);
+    } else if (event.keyCode == 187) {
+        equal();
+    } else if (event.keyCode == 67) {
+        clean();
+    } else if (event.keyCode == 8) {
+        back();
+    } else if (event.keyCode == 187 || event.keyCode == 189 || event.keyCode == 222 || event.keyCode == 191 || event.keyCode == 190) {
+        // + - * / .
+        // リストを作っておく?
+    }
+};
+
 function insert(num){
     document.form.textview.value = document.form.textview.value + num;
 }
