@@ -1,3 +1,5 @@
+let obj = {187:'+', 189:'-', 222:'*', 191:'/', 190:'.'};
+
 document.onkeydown = keydown;
 
 function keydown() {
@@ -12,7 +14,9 @@ function keydown() {
         back();
     } else if (event.keyCode == 187 || event.keyCode == 189 || event.keyCode == 222 || event.keyCode == 191 || event.keyCode == 190) {
         // + - * / .
-        // リストを作っておく?
+        // キーコードが一部かぶっている
+        // 今は+が使えない
+        insert(obj[event.keyCode]);
     }
 };
 
