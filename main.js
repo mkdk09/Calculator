@@ -6,7 +6,7 @@ function keydown() {
     // insert(event.keyCode-48);
     if (event.keyCode >= 48 && event.keyCode<= 57) {
         insert(event.keyCode-48);
-    } else if (event.keyCode == 187) {
+    } else if (event.keyCode == 13) {
         equal();
     } else if (event.keyCode == 67) {
         clean();
@@ -14,8 +14,6 @@ function keydown() {
         back();
     } else if (event.keyCode == 187 || event.keyCode == 189 || event.keyCode == 222 || event.keyCode == 191 || event.keyCode == 190) {
         // + - * / .
-        // キーコードが一部かぶっている
-        // 今は+が使えない
         insert(obj[event.keyCode]);
     }
 };
